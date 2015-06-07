@@ -1,0 +1,82 @@
+<div class="container">
+
+  <div ng-include="'app/components/navbar/navbar.html'"></div>
+
+  <div class="jumbotron text-center">
+    <h1>'Allo, 'Allo!</h1>
+    <p class="lead">
+      <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
+      Always a pleasure scaffolding your apps.
+    </p>
+    <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+  </div>
+
+  <div class="mt++" flex-container="row" flex-gutter="24">
+    <div flex-item>
+      <form>
+        <lx-text-field label="First and last name" fixed-label="true" icon="account">
+          <input type="text" ng-model="textFields.fixedFirstName">
+        </lx-text-field>
+
+        <lx-text-field label="Phone number" fixed-label="true" icon="phone">
+          <input type="text" ng-model="textFields.fixedLastName">
+        </lx-text-field>
+
+        <lx-text-field label="Email address" fixed-label="true" icon="email">
+          <input type="email" ng-model="textFields.fixedEmail">
+        </lx-text-field>
+
+        <lx-text-field label="Location" fixed-label="true" icon="city">
+          <input type="text" ng-model="textFields.fixedAdress">
+        </lx-text-field>
+      </form>
+    </div>
+
+    <div flex-item>
+      <form>
+        <lx-text-field label="First name" fixed-label="true">
+          <input type="text" ng-model="textFields.fixedFirstName2">
+        </lx-text-field>
+
+        <lx-text-field label="Last name" fixed-label="true">
+          <input type="text" ng-model="textFields.fixedLastName2">
+        </lx-text-field>
+
+        <lx-text-field label="Email" fixed-label="true">
+          <input type="email" ng-model="textFields.fixedEmail2">
+        </lx-text-field>
+
+        <lx-text-field label="Address" fixed-label="true">
+          <input type="text" ng-model="textFields.fixedAdress2">
+        </lx-text-field>
+      </form>
+    </div>
+  </div>
+
+  <lx-date-picker model="datepicker.date" label="Pick a date" locale="fr"></lx-date-picker>
+
+  <div class="mt+">
+    <lx-date-picker model="datepicker.date" label="Pick a date" locale="fr" fixed-label="true" icon="calendar"></lx-date-picker>
+    <lx-date-picker label="Pick a date" locale="fr" fixed-label="true" icon="cake-variant"></lx-date-picker>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in awesomeThings | orderBy:'rank'">
+      <div class="thumbnail">
+        <img class="pull-right" ng-src="assets/images/{{awesomeThing.logo}}" alt="{{awesomeThing.title}}">
+        <div class="caption">
+          <h3>{{awesomeThing.title}}</h3>
+          <p>{{awesomeThing.description}}</p>
+          <p><a ng-href="{{awesomeThing.url}}">{{awesomeThing.url}}</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="footer">
+    <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
+  </div>
+
+</div>
